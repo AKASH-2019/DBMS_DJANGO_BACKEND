@@ -4,9 +4,9 @@ from psycopg2.extras import Json
 
 con = psycopg2.connect(
     host = "localhost",
-    database = "elearning",
-    user = "postgres",
-    password = "postgres"
+    database = "elearning",          # give your DB name
+    user = "postgres",               # give your postgres username
+    password = "postgres"            # give your postgres password 
 )
 
 from django.db import connection
