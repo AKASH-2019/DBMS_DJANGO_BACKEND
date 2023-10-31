@@ -33,7 +33,7 @@ def db(storeProcedure,payload):
     cur = con.cursor()
 
     sql = f"SELECT {storeProcedure}('{payload}'::jsonb)"
-    # print(sql)
+    print('sql ', sql)
     
     cur.execute(sql)
     con.commit()

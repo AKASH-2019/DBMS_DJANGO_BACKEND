@@ -20,7 +20,12 @@ from dbmsBackend import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.hello_world, name='hello_world'),
-    path('instructor/all', views.instructor_pagination, name='instructor_pagination'),
-    path('teaches/all', views.teaches_pagination, name='teaches_pagination')
+
+    # insert data to database [POST] method
+    path('instructor/insert', views.instructorInsert, name='insrtructor_insert'),
+
+    # get data from database [GET] method
+    path('instructor/all', views.instructorPagination, name='instructor_pagination'),
+    path('teaches/all', views.teachesPagination, name='teaches_pagination')
 
 ]
